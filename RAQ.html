@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Responsiveness & Media Queries</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+	<style>
+    @import url('https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500;600&family=Merriweather:ital,wght@0,300;0,400;1,300;1,400&family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;1,100;1,200;1,300;1,400;1,500&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,300;1,400;1,500&family=Sacramento&family=Send+Flowers&family=Yanone+Kaffeesatz:wght@200;300;400;500&family=Zen+Loop&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    background-color: hsl(0, 100%, 74%);
+    height: 100vh;
+    width: 100%;
+    display: flex;
+     align-items: center;
+    justify-content: center;
+
+}
+.gridbox1{
+    /* background-color: green; */
+    width: 30%;
+    height: 300px;
+    color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 20px;
+  position: relative;
+  left: 120px;
+   }
+ .gridbox1 .contents h1{
+     margin-bottom: 18px;
+     font-weight: 800;
+ }
+   .gridbox2{
+    /* background-color: blue; */
+    width: 50%;
+    height: 400px;
+    
+}
+.gridbox2 div {
+    margin-bottom: 30px;
+    text-align: center;
+    margin: 0 auto 30px;
+}
+.gridbox2 div a{
+    text-decoration: none;
+    color: #fff;
+   background-color: hsl(248, 32%, 49%);
+   padding: 15px 30px;
+   width: 60%;
+   display: block;
+   text-align: center;
+   margin: 10px auto;
+   border-radius: 10px;
+   font-size: 1rem;
+   font-weight: bold;
+   box-shadow: 1px 1px 4px rgb(44, 44, 44);
+}
+.gridbox2 div span{
+    font-weight: 100;
+}
+.gridbox2 form{
+    width: 60%;
+    background-color: #fff;
+    display: block;
+    padding: 20px;
+    margin: 0 auto;
+    border-radius: 10px;
+    box-shadow: 1px 1px 1px rgb(44, 44, 44);
+}
+.gridbox2 form input{
+ margin: 15px;
+ display: block;
+ width: 92%;
+ line-height: 2.5;
+ padding: 0 20px;
+ font-weight: 600;
+ border-radius: 5px;
+ outline: none;
+ border: 1px solid rgb(212, 212, 212);
+}
+.gridbox2 form input:focus{
+    border: 1px solid rgb(133, 133, 133);
+}
+.gridbox2 form button{
+    background-color: hsl(154, 59%, 51%);
+    border-radius: 5px;
+    outline: none;
+    display: block;
+    width: 92%;
+    padding: 10px;
+    margin: 0 auto;
+    /* border: 1px solid rgb(150, 148, 148); */
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+.gridbox2 form small{
+    /* background-color: red; */
+    padding: 10px;
+    display: block;
+    margin: 10px auto;
+    font-weight: bold;
+    color: rgb(145, 142, 142);
+    font-size: 0.6rem;
+}
+.gridbox2 form small a{
+    color: rgb(238, 74, 74);
+    text-decoration: none;
+}
+@media (max-width: 1007px){
+    .container{
+        flex-direction: column;
+    }
+    .gridbox1{
+        left: 0;
+        width: 100%;
+    }
+    .gridbox1 .contents{
+text-align: center;
+    }
+    .gridbox2{
+        width: 100%;
+    }
+    .gridbox2 div{
+        width: 100%;
+    }
+}
+
+
+
+
+  </style> 
+
+<body>
+   <div class="container">
+        <div class="gridbox1">
+            <div class="contents">
+                <h1>Learn to code by watching others</h1>
+                <small>See how experienced developers solve a problem in realtime. Watching scripted tutorials is great,
+                    but understanding how developers thinks is invaluable.</small>
+            </div>
+
+        </div>
+        <div class="gridbox2">
+            <div><a href="#" target="_blank">Try it for free 7 days <span>then $20/mo thereafter</span></a></div>
+                        <form action="">
+                <!-- <label for="firstname">First name</label> -->
+                <input type="text" placeholder="First Name">
+                <!-- <label for="lastname">Email</label> -->
+                <input type="email" placeholder="Email Address">
+                <!-- <label for="lastname">Password</label> -->
+                <input type="password" placeholder="Password">
+                <!-- <label for="lastname">Last Name</label> -->
+                <input type="text" placeholder="Last Name" required>
+                <button type="submit" value="Claim your free trial">Claim your free trial</button>
+                <small>By checking the button, you are agreeing to our <a href="#" target="_blank">Terms and conditions</a></small>
+
+            </form>
+        </div>
+   </div>
+   </body>
+
+</html>
